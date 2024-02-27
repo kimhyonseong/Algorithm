@@ -1,7 +1,6 @@
 #khs .gitignore
 .idea
 *.iml
-src
 out
 
 #
