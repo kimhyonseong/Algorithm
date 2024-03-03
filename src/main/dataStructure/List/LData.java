@@ -1,10 +1,10 @@
 package main.dataStructure.List;
 
 public class LData {
-  public static int EQUAL_ALL = 0;
-  public static int EQUAL_X = 1;
-  public static int EQUAL_y = 2;
-  public static int UNEQUAL = -1;
+  public static final int EQUAL_ALL = 0;
+  public static final int EQUAL_X = 1;
+  public static final int EQUAL_y = 2;
+  public static final int UNEQUAL = -1;
 
   private int x;
   private int y;
