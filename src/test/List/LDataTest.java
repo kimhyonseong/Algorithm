@@ -1,4 +1,4 @@
-package test;
+package test.List;
 
 import main.dataStructure.List.LData;
 import main.dataStructure.List.LDataUtils;

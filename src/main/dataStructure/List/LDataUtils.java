@@ -1,10 +1,10 @@
 package main.dataStructure.List;
 
 public class LDataUtils {
-  static int EQUAL_ALL = 0;
-  static int EQUAL_X = 1;
-  static int EQUAL_y = 2;
-  static int UNEQUAL = -1;
+  public static int EQUAL_ALL = 0;
+  public static int EQUAL_X = 1;
+  public static int EQUAL_y = 2;
+  public static int UNEQUAL = -1;
 
   static public int compareLData(LData x, LData y) {
     if (x.getX() == y.getX() && x.getY() == y.getY()) {
