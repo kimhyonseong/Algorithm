@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class MyList {
   private final int LIST_LEN = 100;
-  private final int[] listData = new int[this.LIST_LEN];
+  private final LData[] listData = new LData[LIST_LEN];
   private int numOfData;
   private int curPosition;
 
@@ -13,7 +13,7 @@ public class MyList {
     this.curPosition = -1;
   }
 
-  public boolean listInsert(int data) {
+  public boolean listInsert(LData data) {
     if (this.numOfData >= this.LIST_LEN) {
       System.out.println("저장 불가능");
       return false;
@@ -22,7 +22,6 @@ public class MyList {
     this.listData[this.numOfData] = data;
     this.numOfData++;
     System.out.println("현재 크기: " + this.numOfData);
-    System.out.println(Arrays.toString(this.listData));
     return true;
   }
 
@@ -42,22 +41,24 @@ public class MyList {
     return true;
   }
 
-  public int getCurrentData() {
+  public LData getCurrentData() {
     return this.listData[this.curPosition];
   }
 
-  public int listRemove() {
+  public LData listRemove() {
     int currentPosition = this.curPosition;
-    int returnData = this.listData[currentPosition];
+    LData returnData = this.listData[currentPosition];
 
     for (int i=currentPosition; i<this.numOfData-1; i++) {
       this.listData[i] = this.listData[i+1];
     }
+    this.numOfData--;
+    this.curPosition--;
 
     return returnData;
   }
 
-  public int lstCount() {
+  public int listCount() {
     return this.numOfData;
   }
 }
