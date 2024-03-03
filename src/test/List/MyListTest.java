@@ -1,7 +1,6 @@
 package test.List;
 
 import main.dataStructure.List.LData;
-import main.dataStructure.List.LDataUtils;
 import main.dataStructure.List.MyList;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -17,10 +16,10 @@ public class MyListTest {
     myList.listInsert(new LData(3,6));
 
     if (myList.listFirst()) {
-      LDataUtils.showData(myList.getCurrentData());
+      LData.showData(myList.getCurrentData());
 
       while (myList.listNext()) {
-        LDataUtils.showData(myList.getCurrentData());
+        LData.showData(myList.getCurrentData());
       }
     }
   }
@@ -29,9 +28,9 @@ public class MyListTest {
   void remove() {
     if (myList.listFirst()) {
       while (myList.listNext()) {
-        if (LDataUtils.compareLData(myList.getCurrentData(), new LData(2,5)) == LDataUtils.EQUAL_ALL) {
+        if (LData.compareLData(myList.getCurrentData(), new LData(2,5)) == LData.EQUAL_ALL) {
           System.out.print("삭제 데이터 - ");
-          LDataUtils.showData(myList.listRemove());
+          LData.showData(myList.listRemove());
         }
       }
 
