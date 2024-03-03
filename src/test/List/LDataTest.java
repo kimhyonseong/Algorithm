@@ -12,11 +12,11 @@ public class LDataTest {
   void getSet() {
     lData.setX(1);
     System.out.println("x: " + lData.getX());
-    LData.showData(lData);
+    Assertions.assertEquals(lData.getX(), 1);
 
     lData.setY(2);
     System.out.println("y: " + lData.getY());
-    LData.showData(lData);
+    Assertions.assertEquals(lData.getY(), 2);
   }
 
   @Test
